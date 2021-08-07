@@ -186,7 +186,7 @@ app.get("/check/:id",function(req,res){
 app.post("/image/:id",upload.single('image'),function(req,res){
   id = req.params.id;
   Resumedata.updateOne({"ID":id},
-  {$set:{"photo":"/api/public/images/"+xxa
+  {$set:{"photo":"/api/images/"+xxa
 }}).then(function(){
   console.log("ok");
   res.send();
