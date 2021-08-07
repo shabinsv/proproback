@@ -13,7 +13,7 @@ var nodemailer = require('nodemailer');
 var xxa="";
 const storage = multer.diskStorage({
       destination: function (req, file, cb) {
-        cb(null, '/public/images');
+        cb(null,__dirname+'/public/images');
       },
       filename: function (req, file, cb) {
        xxa=file.originalname;
